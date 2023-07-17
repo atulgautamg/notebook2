@@ -1,0 +1,91 @@
+import React from "react";
+import { useState } from "react";
+import NoteContext from "./notecontext";
+const NoteState=(props)=>{
+    const obj1={
+     "name":"atul",
+     "class":"7a"
+    }
+    const [state,setstate]=useState(obj1);
+  const update= ()=>{
+     setTimeout(() => {
+        setstate({"name":"rahul","class":"3f"});
+     }, 2000);
+  }
+  const notes1=
+    [
+        {
+          "_id": "642dcc8fdc1eda1becc65fc11",
+          "title": "my new house",
+          "description": "it is very dangerous",
+          "date": "2023-04-05T19:31:27.890Z",
+          "user": "642c85353a4ce72c2464a6b5",
+          "__v": 0
+        },
+        {
+          "_id": "6430532dae287d27dc7a73042",
+          "title": "my new house is very happy",
+          "description": "it is very dangerous home",
+          "date": "2023-04-07T17:30:21.696Z",
+          "user": "642c85353a4ce72c2464a6b5",
+          "__v": 0
+        }
+        ,
+        {
+            "_id": "6430532dae287d27dc7a73048",
+            "title": "my new house is very happy",
+            "description": "it is very dangerous home",
+            "date": "2023-04-07T17:30:21.696Z",
+            "user": "642c85353a4ce72c2464a6b5",
+            "__v": 0
+          }
+          ,
+        {
+            "_id": "6430532dae287d27dc7a73045",
+            "title": "my new house is very happy",
+            "description": "it is very dangerous home",
+            "date": "2023-04-07T17:30:21.696Z",
+            "user": "642c85353a4ce72c2464a6b5",
+            "__v": 0
+          }
+          ,
+        {
+            "_id": "6430532dae287d27dc7a730410",
+            "title": "my new house is very happy",
+            "description": "it is very dangerous home",
+            "date": "2023-04-07T17:30:21.696Z",
+            "user": "642c85353a4ce72c2464a6b5",
+            "__v": 0
+          }
+      ]
+    const [notes,setnotes]=useState(notes1);
+    const addNote=(title,description)=>{
+        const note1={
+          "_id": "6430532dae24587d27djhc7a730410",
+          "title": title,
+          "description": description,
+          "date": "2023-04-07T17:30:21.696Z",
+          "user": "642c85353a4ce72c2464a6b5",
+          "__v": 0
+        }
+        setnotes(notes.concat(note1));
+        
+  }
+  const DeleteNote=(id)=>{
+    
+    const newNote=notes.filter((note)=>{return note._id!==id});
+    setnotes(newNote);
+      
+  }
+  const UpdateNote=()=>{
+      
+  }
+    
+    
+    return (
+        <NoteContext.Provider value={{notes,setnotes,addNote,DeleteNote,UpdateNote}}>
+            {props.children}
+        </NoteContext.Provider>
+    )
+}
+export default NoteState;
