@@ -11,7 +11,7 @@ const NoteState=(props)=>{
       const a={name:"hello",title:"world"};
     const [notes,setnotes]=useState(notes1);
     const addNote= async (title,description)=>{
-      const response=await fetch(`https://notebook2-flame.vercel.app/auth/addnotes`,
+      const response=await fetch(`https://notebook2-zegm.vercel.app/auth/addnotes`,
       {method:'POST',
        headers:{
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const NoteState=(props)=>{
 
     
   const fetchallnotes=async ()=>{
-  const response=await fetch(`https://notebook2-flame.vercel.app/auth/getnotes`,
+  const response=await fetch(`https://notebook2-zegm.vercel.app/auth/getnotes`,
   {method:'GET',
    headers:{
     "Content-Type": "application/json",
@@ -41,7 +41,7 @@ setnotes(json1);
   }
   const DeleteNote=async(id)=>
   {
-    const response=await fetch(`https://notebook2-flame.vercel.app/auth/deletenotes/${id}`,
+    const response=await fetch(`https://notebook2-zegm.vercel.app/auth/deletenotes/${id}`,
     {method:'DELETE',
      headers:{
       "Content-Type": "application/json",
@@ -57,7 +57,7 @@ setnotes(json1);
     
   
   const UpdateNote=async (id,title,description)=>{
-    const response=await fetch(`https://notebook2-flame.vercel.app/auth/updatenotes/${id}`,
+    const response=await fetch(`https://notebook2-zegm.vercel.app/auth/updatenotes/${id}`,
     {method:'PUT',
      headers:{
       "Content-Type": "application/json",
