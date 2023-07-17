@@ -8,7 +8,7 @@ const Login = (props) => {
      let navigate=useNavigate();
     const handleclick=async (e)=>{
 e.preventDefault();
-const response=await fetch(`https://notebook2-flame.vercel.app/auth/login`,
+const response=await fetch(`https://notebook2-zegm.vercel.app/auth/login`,
   {method:'POST',
    headers:{
     "Content-Type": "application/json",
