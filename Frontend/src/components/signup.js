@@ -9,7 +9,7 @@ const Signup = (props) => {
     const handleclick=async (e)=>{
 e.preventDefault();
 const {name,email,password,date}=cred;
-const response=await fetch(`https://notebook2-zegm.vercel.app/auth/createuser`,
+const response=await fetch(`http://localhost:${host}/auth/createuser`,
   {method:'POST',
    headers:{
     "Content-Type": "application/json",
