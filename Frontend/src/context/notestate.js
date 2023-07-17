@@ -11,7 +11,7 @@ const NoteState=(props)=>{
       const a={name:"hello",title:"world"};
     const [notes,setnotes]=useState(notes1);
     const addNote= async (title,description)=>{
-      const response=await fetch(`http://localhost:${host}auth/addnotes`,
+      const response=await fetch(`http://localhost:${host}/auth/addnotes`,
       {method:'POST',
        headers:{
         "Content-Type": "application/json",
