@@ -9,7 +9,7 @@ const port = 5000
 app.use(express.json());
 app.use(cors());
 app.use(cors({
-  origin:{"https://notebook2-flame.vercel.app/"},
+  origin:{"https://notebook2-zegm.vercel.app/"},
   methods:{"POST","GET"},
   credidentials:true
   ));
